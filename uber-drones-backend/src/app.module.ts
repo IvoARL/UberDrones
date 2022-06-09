@@ -15,7 +15,7 @@ import { RequestsModule } from './requests/requests.module';
 
 
 @Module({
-  imports: [UsersModule, DepotsModule, AdminsModule, DronesModule, RequestsModule, MongooseModule.forRoot('mongodb+srv://ivor:8600@users.ooebc.mongodb.net/?retryWrites=true&w=majority')],
+  imports: [UsersModule, DepotsModule, AdminsModule, DronesModule, RequestsModule, MongooseModule.forRoot('mongodb+srv://test:1234@users.ooebc.mongodb.net/?retryWrites=true&w=majority')],
   controllers: [AppController],
   providers: [AppService],
 })
