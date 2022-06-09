@@ -1,0 +1,14 @@
+<button class="btn btn-secondary"><a class="nav-link" [routerLink]="['/users/create']" routerLinkActive="router-link-active">Create User</a></button>
+<button class="btn btn-secondary"><a class="nav-link" [routerLink]="['/users/']" routerLinkActive="router-link-active">Edit User</a></button>
+
+<div class="column">
+    <div class="card card-body mb2" *ngFor="let user of users$ | async as list">
+        <div class="card-body">
+            <div class="row"><ul>ID: {{user.id}}</ul></div>
+            <div class="row"><ul>Username: {{user.user}}</ul></div>
+            <div class="row"><ul>Email: {{user.email}}</ul></div>
+            <div class="row"><ul>GPS: {{user.gps}} </ul></div>             
+        </div>
+    </div>
+</div>
+

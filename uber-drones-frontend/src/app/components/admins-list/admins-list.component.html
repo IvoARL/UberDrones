@@ -1,0 +1,13 @@
+<button class="btn btn-secondary"><a class="nav-link" [routerLink]="['/admins/create']" routerLinkActive="router-link-active">Create Admin</a></button>
+
+<div class="column">
+    <div class="card card-body mb2" *ngFor="let admin of admins$ | async as list">
+        <button class="btn btn-secondary"><a class="nav-link" [routerLink]="['/admins/update', admin.id]" routerLinkActive="router-link-active">Edit Admin</a></button>
+        <div class="card-body">
+            <div class="row"><ul>ID: {{admin.id}}</ul></div>
+            <div class="row"><ul>Username: {{admin.AdminName}}</ul></div>
+            <div class="row"><ul>Email: {{admin.email}}</ul></div>
+            <div class="row"><ul>Armazem: {{admin.armazem}} </ul></div>                 
+        </div>
+    </div>
+</div>

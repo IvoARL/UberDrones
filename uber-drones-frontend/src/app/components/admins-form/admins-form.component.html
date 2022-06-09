@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-sm4 offset-md-4">
+        <div class="card card-body">
+            <form (submit)="submitAdmin()">
+                <div class="form-group">
+                    <input type="text" name="AdmiName" [(ngModel)]="admin.AdmiName" class="form-control"
+                    placeholder="AdminName" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="email" [(ngModel)]="admin.email" class="form-control" 
+                    placeholder="Email" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="armazem" [(ngModel)]="admin.armazem" class="form-control" 
+                    placeholder="Armazem" autofocus>
+                </div>
+                <button class="btn btn-primary btn-block">Save</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<button class="btn btn-secondary"><a class="nav-link" [routerLink]="['/drones/create']" routerLinkActive="router-link-active">Create Drone</a></button>
+<button class="btn btn-secondary"><a class="nav-link" [routerLink]="['/drones/']" routerLinkActive="router-link-active">Edit Drone</a></button>
+
+<div class="column">
+    <div class="card card-body mb2" *ngFor="let drone of drones$ | async as list">
+        <div class="card-body">
+            <div  class="row"><ul>Drone ID: {{drone.id}}</ul></div>
+            <div  class="row"><ul>Drone Depot: {{drone.ArmazemDrone}}</ul></div>
+            <div  class="row"><ul>Drone Speed: {{drone.speed}}</ul></div>  
+            <div  class="row"><ul>Drone GPS: {{drone.coordenada}}</ul></div>     
+            <div  class="row"><ul>Drone Status: {{drone.status}}</ul></div>          
+        </div>
+    </div>
+</div>

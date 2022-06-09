@@ -1,0 +1,12 @@
+<button class="btn btn-secondary"><a class="nav-link" [routerLink]="['/depots/create']" routerLinkActive="router-link-active">Create Depot</a></button>
+<button class="btn btn-secondary"><a class="nav-link" [routerLink]="['/depots/']" routerLinkActive="router-link-active">Edit Depot</a></button>
+
+<div class="column">
+    <div class="card card-body mb2" *ngFor="let depot of depots$ | async as list">
+        <div class="card-body">
+            <div class="row"><ul>Depot ID: {{depot.id}}</ul></div>
+            <div class="row"><ul>Depot Name: {{depot.DepotName}}</ul></div>
+            <div class="row"><ul>Depot GPS: {{depot.gps}}</ul></div>      
+        </div>
+    </div>
+</div>

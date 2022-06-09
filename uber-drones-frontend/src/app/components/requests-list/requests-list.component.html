@@ -1,0 +1,14 @@
+<button class="btn btn-secondary"><a class="nav-link" [routerLink]="['/requests/create']" routerLinkActive="router-link-active">Create Request</a></button>
+<button class="btn btn-secondary"><a class="nav-link" [routerLink]="['/users/']" routerLinkActive="router-link-active">Edit REquest</a></button>
+
+<div class="column">
+    <div class="card card-body mb2" *ngFor="let request of requests$ | async as list">
+        <div class="card-body">
+            <div class="row"><ul>Request ID: {{request.Request_ID}}</ul></div>
+            <div class="row"><ul>Request User: {{request.username}}</ul></div>
+            <div class="row"><ul>Drone ID: {{request.Drone_ID}}</ul></div>        
+            <div class="row"><ul>Depot's Origin: {{request.armazem}}</ul></div>      
+            <div class="row"><ul>Status Request: {{request.status}}</ul></div>          
+        </div>
+    </div>
+</div>
